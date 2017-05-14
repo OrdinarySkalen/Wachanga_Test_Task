@@ -22,9 +22,9 @@ class Basket
 			$this->balls[] = rand(1, 999);
 	}
 	
-	public function printBasket($nomber)
+	public function printBasket($title)
 	{
-		print "<br>Basket $nomber: ";
+		print "<br>$title: ";
 		foreach ($this->balls as $value)
 		{
 			print "$value, ";
