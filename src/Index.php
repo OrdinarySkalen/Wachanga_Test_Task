@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 </head>
 <body>
-<form action="app.php" method="POST">
+<form action="Index.php" method="POST">
     Balls in user's basket: <input type="number" name="userBasketCount" value=100 /><br><br>
     Count of baskets: <input type="number" name="basketCount" value=30 /><br><br>
     <input type="submit" value="Try again">
