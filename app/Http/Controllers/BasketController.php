@@ -8,7 +8,6 @@ class BasketController extends Controller
 {
     public function index()
     {
-        $controller = new BasketController();
         $userBasketCount = 100;
         $basketCount = 31;
 
@@ -17,16 +16,16 @@ class BasketController extends Controller
 
         $taskB="";
         $taskC="";
-        $userBasket = $controller->fillBasket($userBasketCount);
+        $userBasket =  BasketController::fillBasket($userBasketCount);
         $baskets = [];
 
         for ($i=1; $i<$basketCount+1;$i++)
         {
-            $basket = $controller->fillBasket(rand(1, 9));
+            $basket =  BasketController::fillBasket(rand(1, 9));
             $baskets[$i] = $basket;
-            if ($controller->existAllElements($basket, $userBasket)===1)
+            if (BasketController::existAllElements($basket, $userBasket)===1)
             {$taskB.="#$i ";}
-            if ($controller->existSingleElement($basket, $userBasket)===1)
+            if (BasketController::existSingleElement($basket, $userBasket)===1)
             {$taskC.="#$i ";}
         }
 
